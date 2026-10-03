@@ -1,0 +1,98 @@
+import { Creator, Team } from "./types";
+
+export const creator: Creator = {
+  id: "creator-1",
+  slug: "ac-milan-creator",
+  name: "AC Milan Analysis",
+  handle: "@acmilananalysis",
+  bio: "Tactical breakdowns, match analysis, and deep dives into Rossoneri football. Former academy coach sharing insights on Milan's tactical evolution.",
+  avatar: "https://images.unsplash.com/photo-1566577134770-3d85bb209001?w=200&h=200&fit=crop",
+  coverImage: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&h=400&fit=crop",
+  primaryTeam: {
+    id: "team-milan",
+    name: "AC Milan",
+    shortName: "MIL",
+    crest: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg",
+    primaryColor: "#FB090B",
+    secondaryColor: "#000000",
+  },
+  socialLinks: {
+    youtube: "https://youtube.com/@acmilananalysis",
+    instagram: "https://instagram.com/acmilananalysis",
+    tiktok: "https://tiktok.com/@acmilananalysis",
+    twitter: "https://twitter.com/acmilananalysis",
+    website: "https://acmilananalysis.com",
+  },
+  stats: {
+    subscribers: 284000,
+    totalViews: 42800000,
+    videosCount: 342,
+  },
+};
+
+export const teams: Team[] = [
+  {
+    id: "team-milan",
+    name: "AC Milan",
+    shortName: "MIL",
+    crest: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg",
+    primaryColor: "#FB090B",
+    secondaryColor: "#000000",
+  },
+  {
+    id: "team-inter",
+    name: "Inter Milan",
+    shortName: "INT",
+    crest: "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg",
+    primaryColor: "#02A8E0",
+    secondaryColor: "#000000",
+  },
+  {
+    id: "team-juventus",
+    name: "Juventus",
+    shortName: "JUV",
+    crest: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Juventus_FC_2017_icon.svg",
+    primaryColor: "#000000",
+    secondaryColor: "#FFFFFF",
+  },
+  {
+    id: "team-napoli",
+    name: "Napoli",
+    shortName: "NAP",
+    crest: "https://upload.wikimedia.org/wikipedia/commons/2/2d/SSC_Napoli_Logo_2018.svg",
+    primaryColor: "#0066CC",
+    secondaryColor: "#FFFFFF",
+  },
+  {
+    id: "team-roma",
+    name: "AS Roma",
+    shortName: "ROM",
+    crest: "https://upload.wikimedia.org/wikipedia/it/2/2f/AS_Roma_Logo_2017.svg",
+    primaryColor: "#7A1C2B",
+    secondaryColor: "#F9D923",
+  },
+  {
+    id: "team-lazio",
+    name: "Lazio",
+    shortName: "LAZ",
+    crest: "https://upload.wikimedia.org/wikipedia/it/7/73/SS_Lazio_Logo_2021.svg",
+    primaryColor: "#004080",
+    secondaryColor: "#FFFFFF",
+  },
+  {
+    id: "team-atalanta",
+    name: "Atalanta",
+    shortName: "ATA",
+    crest: "https://upload.wikimedia.org/wikipedia/it/9/9b/Atalanta_BC_Logo_2017.svg",
+    primaryColor: "#004D99",
+    secondaryColor: "#000000",
+  },
+  {
+    id: "team-fiorentina",
+    name: "Fiorentina",
+    shortName: "FIO",
+    crest: "https://upload.wikimedia.org/wikipedia/it/2/2a/ACF_Fiorentina_Logo_2018.svg",
+    primaryColor: "#4B0082",
+    secondaryColor: "#FFFFFF",
+  },
+];

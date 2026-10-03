@@ -1,0 +1,178 @@
+import { ContentItem, ContentPlatform, ContentType, ContentStatus } from "./types";
+import { matches } from "./matches";
+
+export const contentItems: ContentItem[] = [
+  {
+    id: "content-1",
+    title: "Derby della Madonnina Tactical Preview",
+    platform: "YouTube",
+    type: "Match Preview",
+    status: "Published",
+    priority: "High",
+    scheduledDate: "2025-09-15T18:00:00Z",
+    publishedDate: "2025-09-15T18:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=640&h=360&fit=crop",
+    tags: ["Derby", "Tactics", "Inter Milan"],
+    matchId: "match-1",
+    description: "Deep dive into how Milan can exploit Inter's defensive transitions in the Derby della Madonnina.",
+  },
+  {
+    id: "content-2",
+    title: "Reijnders: The Engine Room Evolution",
+    platform: "YouTube",
+    type: "Player Profile",
+    status: "Editing",
+    priority: "High",
+    scheduledDate: "2025-09-20T18:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=640&h=360&fit=crop",
+    tags: ["Reijnders", "Midfield", "Analysis"],
+    description: "How Tijjani Reijnders has become Milan's most complete midfielder under Fonseca.",
+  },
+  {
+    id: "content-3",
+    title: "Fonseca's 4-2-3-1: First Month Analysis",
+    platform: "YouTube",
+    type: "Tactical Analysis",
+    status: "Filmed",
+    priority: "Medium",
+    scheduledDate: "2025-09-25T18:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=640&h=360&fit=crop",
+    tags: ["Fonseca", "Formation", "Tactics"],
+    description: "Breaking down the tactical shifts in Milan's first month under the new manager.",
+  },
+  {
+    id: "content-4",
+    title: "Leão vs Dimarco: The Flank Battle",
+    platform: "Shorts",
+    type: "Short Form",
+    status: "Published",
+    priority: "Medium",
+    scheduledDate: "2025-09-14T12:00:00Z",
+    publishedDate: "2025-09-14T12:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=640&h=360&fit=crop",
+    tags: ["Leão", "Shorts", "Derby"],
+    description: "60-second breakdown of the key flank matchup in the Milan derby.",
+  },
+  {
+    id: "content-5",
+    title: "Milan's Pressing Triggers: Training Ground View",
+    platform: "Instagram",
+    type: "Tactical Analysis",
+    status: "Scripted",
+    priority: "High",
+    scheduledDate: "2025-09-22T10:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=640&h=360&fit=crop",
+    tags: ["Pressing", "Training", "Tactics"],
+    description: "Carousel post analyzing Milan's pressing structure from training sessions.",
+  },
+  {
+    id: "content-6",
+    title: "Transfer Deadline Day: Milan's Late Moves",
+    platform: "TikTok",
+    type: "Transfer News",
+    status: "Idea",
+    priority: "Low",
+    scheduledDate: "2025-09-30T15:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=640&h=360&fit=crop",
+    tags: ["Transfers", "Deadline Day"],
+    description: "Quick reaction to Milan's final transfer window moves.",
+  },
+  {
+    id: "content-7",
+    title: "Post-Match: Milan 2-1 Venezia Analysis",
+    platform: "YouTube",
+    type: "Match Review",
+    status: "Published",
+    priority: "High",
+    scheduledDate: "2025-09-10T20:00:00Z",
+    publishedDate: "2025-09-10T20:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=640&h=360&fit=crop",
+    tags: ["Venezia", "Match Review", "Serie A"],
+    matchId: "match-3",
+    description: "Full tactical review of Milan's comeback win against Venezia at San Siro.",
+  },
+  {
+    id: "content-8",
+    title: "Pulisic's Impact: By The Numbers",
+    platform: "Instagram",
+    type: "Player Profile",
+    status: "Published",
+    priority: "Medium",
+    scheduledDate: "2025-09-12T14:00:00Z",
+    publishedDate: "2025-09-12T14:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=640&h=360&fit=crop",
+    tags: ["Pulisic", "Stats", "Analysis"],
+    description: "Statistical breakdown of Christian Pulisic's first 5 games for Milan.",
+  },
+  {
+    id: "content-9",
+    title: "UCL Matchday 1: Liverpool Preview",
+    platform: "YouTube",
+    type: "Match Preview",
+    status: "Scripted",
+    priority: "High",
+    scheduledDate: "2025-09-17T18:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=640&h=360&fit=crop",
+    tags: ["Champions League", "Liverpool", "Preview"],
+    matchId: "match-4",
+    description: "How Milan can hurt Liverpool at Anfield in the Champions League opener.",
+  },
+  {
+    id: "content-10",
+    title: "Maignan's Distribution: Goalkeeper Playmaking",
+    platform: "TikTok",
+    type: "Short Form",
+    status: "Filmed",
+    priority: "Low",
+    scheduledDate: "2025-09-28T11:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=640&h=360&fit=crop",
+    tags: ["Maignan", "Goalkeeper", "Distribution"],
+    description: "Mike Maignan's elite distribution creating counter-attacks.",
+  },
+  {
+    id: "content-11",
+    title: "Tomori & Gabbia: Partnership Analysis",
+    platform: "YouTube",
+    type: "Tactical Analysis",
+    status: "Idea",
+    priority: "Medium",
+    scheduledDate: "2025-10-02T18:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=640&h=360&fit=crop",
+    tags: ["Tomori", "Gabbia", "Defense"],
+    description: "How Milan's center-back pairing has developed into one of Serie A's best.",
+  },
+  {
+    id: "content-12",
+    title: "Theo Hernandez: Inverted Fullback Role",
+    platform: "Shorts",
+    type: "Short Form",
+    status: "Idea",
+    priority: "Medium",
+    scheduledDate: "2025-10-05T12:00:00Z",
+    thumbnail: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=640&h=360&fit=crop",
+    tags: ["Theo", "Fullback", "Tactics"],
+    description: "Theo's evolution into an inverted left-back under Fonseca.",
+  },
+];
+
+export const getContentByStatus = (status: ContentStatus): ContentItem[] => {
+  return contentItems.filter((c) => c.status === status);
+};
+
+export const getContentByPlatform = (platform: ContentPlatform): ContentItem[] => {
+  return contentItems.filter((c) => c.platform === platform);
+};
+
+export const getContentById = (id: string): ContentItem | undefined => {
+  return contentItems.find((c) => c.id === id);
+};
+
+export const contentColumns: { id: ContentStatus; label: string }[] = [
+  { id: "Idea", label: "Idea" },
+  { id: "Scripted", label: "Scripted" },
+  { id: "Filmed", label: "Filmed" },
+  { id: "Editing", label: "Editing" },
+  { id: "Published", label: "Published" },
+];
+
+export const platforms: ContentPlatform[] = ["YouTube", "Instagram", "TikTok", "Shorts"];
